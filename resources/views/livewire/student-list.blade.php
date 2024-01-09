@@ -17,7 +17,7 @@
                     <td class="px-4 py-2 border-b">
                         {{ $record->marks }}
                     </td>
-                    {{-- Hi i had make changes here  --}}
+                    {{-- Hi i had make changes here viizz29 --}}
 
                     <td class="px-4 py-2 border-b">
                         <button wire:click="delete_row({{ $record->id }})"
