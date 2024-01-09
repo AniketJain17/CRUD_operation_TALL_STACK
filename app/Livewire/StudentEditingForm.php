@@ -25,6 +25,7 @@ class StudentEditingForm extends Component
 
     public function updateStudent()
     {
+
         // Validate and update student details
         $this->validate([
             'name' => 'required|string',
@@ -36,7 +37,8 @@ class StudentEditingForm extends Component
         $student->marks = $this->marks;
         $student->save();
 
-        session()->flash('message', 'Student details updated successfully!');
+        return redirect()->to('/student/view');
+        
     }
 
     public function render()

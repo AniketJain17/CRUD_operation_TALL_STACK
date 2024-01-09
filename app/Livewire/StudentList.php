@@ -18,6 +18,7 @@ class StudentList extends Component
     public $new_marks = [];
 
     public function __construct() {
+    
         $this->records = Student::all();
     }
 
