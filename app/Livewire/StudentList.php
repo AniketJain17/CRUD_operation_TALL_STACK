@@ -15,6 +15,8 @@ class StudentList extends Component
 
     public $records = [];
 
+    public $new_marks = [];
+
     public function __construct() {
         $this->records = Student::all();
     }
@@ -23,7 +25,6 @@ class StudentList extends Component
     public function delete_row($id){
         Student::where('id', $id)->delete();
         $this->records = Student::all();
-        $records = $this->records->fresh();
     }
 
     public function add_form()
@@ -31,14 +32,20 @@ class StudentList extends Component
         $inputs = ['name' => $this->name ,'marks' => $this->marks];
         Student::create($inputs);
         $this->records = Student::all();
-
     }
 
-    // public function update_data($id, $marks){
-    //     //Student::where('id', $record->id)->update($record);
-    //     dd($id, $marks);
-    //     $this->records = Student::all();
-    // }
+    public function update_data($id){
+        $new_marks = $this->new_marks;
+        dd($new_marks);
+        if (isset($new_marks[$id])){
+            $record = Student::find($id);
+            $record->marks = $this->new_marks[$id];
+            $record->save();
+
+        }
+        $this->records = Student::all();
+
+    }
 
 
 
