@@ -37,8 +37,8 @@ class StudentEditingForm extends Component
         $student->marks = $this->marks;
         $student->save();
 
-        return redirect()->to('/student/view');
-        
+        return redirect()->to('/');
+
     }
 
     public function render()

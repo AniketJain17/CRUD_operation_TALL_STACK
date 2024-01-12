@@ -17,7 +17,6 @@
                     <td class="px-4 py-2 border-b">
                         {{ $record->marks }}
                     </td>
-                    {{-- Hi i had make changes here viizz29 --}}
 
                     <td class="px-4 py-2 border-b">
                         <button wire:click="delete_row({{ $record->id }})"
@@ -51,3 +50,71 @@
     </div>
 
 </div>
+
+
+{{-- <div class="flex h-screen text-white bg-gray-900">
+    <!-- Sidebar -->
+    <aside class="w-64 p-4 bg-indigo-900">
+        <div class="mb-4 text-center">
+            <h2 class="text-2xl font-semibold">Your Logo/Title</h2>
+        </div>
+
+        <!-- Main Menu -->
+        <ul>
+            <li class="mb-2">
+                <a href="/dashboard" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                    <i class="mr-2 fas fa-tachometer-alt"></i> Dashboard
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="/profile" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                    <i class="mr-2 fas fa-user"></i> Profile
+                </a>
+            </li>
+
+            <!-- Dropdown Menu -->
+            <li class="mb-2">
+                <a href="#" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                    <i class="mr-2 fas fa-caret-down"></i> Dropdown
+                </a>
+                <ul class="ml-4">
+                    <li class="mb-2">
+                        <a href="/submenu1" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                            Submenu 1
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/submenu2" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                            Submenu 2
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Additional Menu Elements -->
+        <div class="mt-8">
+            <h3 class="mb-2 text-lg font-semibold">Additional Links</h3>
+            <ul>
+                <li class="mb-2">
+                    <a href="/settings" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                        <i class="mr-2 fas fa-cogs"></i> Settings
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="/logout" class="flex items-center px-4 py-2 text-gray-300 hover:text-white">
+                        <i class="mr-2 fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Content Area -->
+    <div class="flex-1 p-8">
+        <!-- Your main content goes here -->
+        @yield('content')
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js"></script> --}}

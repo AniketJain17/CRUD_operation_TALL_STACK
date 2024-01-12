@@ -1,15 +1,16 @@
-@props(['record'])
+<!-- resources/views/livewire/adminsidebar.blade.php -->
 
-<div>
-    <td class="px-4 py-2 border-b">{{ $record->id }}</td>
-    <td class="px-4 py-2 border-b">{{ $record->name }}</td>
-    <td x-data="{ count: {{$record->marks}} }"class="px-4 py-2 border-b">
-        <input type="number" wire:model='record.marks' x-model="count"/>
+<div class="flex flex-col justify-between h-full p-4 bg-gray-200 border-r border-gray-300">
+    <!-- Your sidebar content goes here -->
+    <ul class="space-y-2">
+        <li><a href="#" class="hover:text-gray-700">Dashboard</a></li>
+        <li><a href="#" class="hover:text-gray-700">Users</a></li>
+        <li><a href="#" class="hover:text-gray-700">Settings</a></li>
+        <!-- Add more links as needed -->
+    </ul>
 
-         <button x-on:click="count++"
-            class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-900">+</button>
-        <button x-on:click="count--" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-900">-</button>
-
-        <button wire:click="emit('fsd')" class="px-4 py-2 text-white bg-indigo-500 rounded hover:bg-indigo-900">update</button>
-    </td>
+    <!-- Add a button -->
+    <button class="px-4 py-2 text-white bg-indigo-500 rounded-full hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo">
+        Create New
+    </button>
 </div>
